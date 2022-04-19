@@ -1,0 +1,12 @@
+---CREATING THE JAR FILE WITH THE SCRIPT---
+First, ensure that you have Java 16.0.2 or higher installed. You can check which version you have by typing "java --version" on the command line. If you don't have Java 16.0.2, you can download it from the
+Oracle website. You will also need to download and install Git Bash if you do not have it. This can be downloaded from the Git website at git-scm.com.
+
+In order to create the JAR file, clone the Github repository into your computer. Start by opening Git Bash and typing "git clone https://github.com/ag4790/deployment_exercise". Now that the repository has been cloned, enter it using "cd deployment_exercise". Now run the convenient script provided for you with "sh buildJar.sh" to create the JAR.
+
+---CREATING THE JAR FILE MANUALLY---
+If you don't want to use the script and instead want to create the JAR file yourself, start by cloning the repository and entering it like above. Now, use "./gradlew build" to ensure that you're starting with
+a successful build. Extract the needed folder from the log4j JAR in the base level of the repository with "jar xf log4j-api-2.13.3.jar org". Move it into the classes folder in order to create the proper 
+directory structure for the JAR using "mv org build/classes/java/main". Now change to that directory with "cd build/classes/java/main". Create the JAR file with "jar cfe RunEdgeConvert.jar RunEdgeConvert ./*".
+Now you should clean up the classes folder by deleting the org folder with "rm org -r" and moving the JAR outside with "mv RunEdgeConvert.jar ../../../..". Now you can learn how to run the JAR by reading
+the README.txt.

@@ -59,7 +59,7 @@ public class CreateDDLMySQLTest {
 
 	@Test
 	public void testConvertStrBooleanToInt_TRUE(){
-		assertEquals("convertStrBooleanToInt test: 'TRUE' --> 0", 0, testObj1.convertStrBooleanToInt("TRUE"));
+		assertEquals("convertStrBooleanToInt test: 'TRUE' --> 0", 1, testObj1.convertStrBooleanToInt("TRUE"));
 	}
 
 	@Test
